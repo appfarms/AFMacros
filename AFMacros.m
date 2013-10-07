@@ -147,3 +147,78 @@ NSDate * AF_NSDateFromZULUString(NSString * dateString)
     return AF_NSDateFromStringWithFormat(dateString, AF_DATE_FORMATTER_STRING_ZULU);
 }
 
+#pragma mark - UIColor
+
+UIColor * AF_UIColorWithHexString(NSString * string)
+{
+    if (AF_VALID_NOTEMPTY(string, NSString))
+    {
+        NSString *cString = [[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
+        
+        // String should be 6 or 8 characters
+        if ([cString length] < 6)
+        {
+            return nil;
+        }
+        
+        // strip "0X" if it appears
+        if ([cString hasPrefix:@"0X"])
+        {
+            cString = [cString substringFromIndex:2];
+        }
+        // strip "#" if it appears
+        else if ([cString hasPrefix:@"#"])
+        {
+            cString = [cString substringFromIndex:1];
+        }
+        
+        if ([cString length] != 6)
+        {
+            return nil;
+        }
+        
+        // Separate into r, g, b substrings
+        NSRange range;
+        range.location = 0;
+        range.length = 2;
+        
+        NSString *rString = [cString substringWithRange:range];
+        
+        range.location = 2;
+        NSString *gString = [cString substringWithRange:range];
+        
+        range.location = 4;
+        NSString *bString = [cString substringWithRange:range];
+        
+        // Scan values
+        unsigned int r, g, b;
+        [[NSScanner scannerWithString:rString] scanHexInt:&r];
+        [[NSScanner scannerWithString:gString] scanHexInt:&g];
+        [[NSScanner scannerWithString:bString] scanHexInt:&b];
+        
+        return [UIColor colorWithRed:((float) r / 255.f)
+                               green:((float) g / 255.f)
+                                blue:((float) b / 255.f)
+                               alpha:1.f];
+    }
+    
+    return nil;
+}
+
+UIColor * AF_UIColorWithRGBString(NSString * string)
+{
+    if (AF_VALID_NOTEMPTY(string, NSString))
+    {
+        NSArray * values = [string componentsSeparatedByString:@","];
+        if (AF_VALID(values, NSArray) && values.count > 2)
+        {
+            return [UIColor colorWithRed:[values[0] floatValue]/255.f
+                                   green:[values[1] floatValue]/255.f
+                                    blue:[values[2] floatValue]/255.f
+                                   alpha:1.f];
+        }
+    }
+    
+    return nil;
+}
+

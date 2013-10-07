@@ -233,7 +233,20 @@ NSDate * AF_NSDateFromUTCString(NSString * dateString);
 NSDate * AF_NSDateFromZULUString(NSString * dateString);
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// UIColor
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+UIColor * AF_UIColorWithHexString(NSString * string);
+UIColor * AF_UIColorWithRGBString(NSString * string);
 
+#ifndef AF_COLOR_HEX
+#define AF_COLOR_HEX(__STRING) AF_UIColorWithHexString(__STRING)
+#endif
 
+#ifndef AF_COLOR_RGB
+#define AF_COLOR_RGB(__STRING) AF_UIColorWithRGBString(__STRING)
+#endif
