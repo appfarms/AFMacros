@@ -1,13 +1,12 @@
-AFMacros
-=============
+# AFMacros
 
 AFMacros brings some handy macros for validation and accessing of common directories or info-plist values
 
 ## Example
 
 ``` objective-c
-    CoreTextLabel * label = (id)@"String"; // Assign NSString to label
-    if (VALID(label, CoreTextLabel)) 
+    CoreTextLabel * label = (id)@"String"; // Assign object of wrong type
+    if (AF_VALID(label, CoreTextLabel)) 
     {
         ZLog(@"%p is valid", label);
     }
@@ -15,6 +14,22 @@ AFMacros brings some handy macros for validation and accessing of common directo
     {
         ZLog(@"%p is not valid", label);
     }
+	
+    NSArray * array = @[@"abc", @"def"]; // Array with two items
+    if (AF_VALID_NOTEMPTY(array, NSArray)) 
+    {
+        ZLog(@"%p is valid and contains at least one object", label);
+    }
+    else
+    {
+        ZLog(@"%p is not valid or empty", label);
+    }
+
+    // This will print item at index 1
+    ZLog(@"Object at index '%d' has value '%@'", 1, AF_ARRAY_OBJECT_AT_INDEX(array, 1));
+
+    // This will print 'nil' for invalid index 99
+    ZLog(@"Object at index '%d' has value '%@'", 99, AF_ARRAY_OBJECT_AT_INDEX(array, 99));
 ```
 
 ## Install
