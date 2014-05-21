@@ -3,7 +3,7 @@
 //  AFMacros
 //
 //  Created by Daniel Kuhnke on 12.08.13.
-//  Copyright (c) 2013 appfarms GmbH & Co. KG. All rights reserved.
+//  Copyright (c) 2014 appfarms GmbH & Co. KG. All rights reserved.
 //
 
 /*
@@ -155,6 +155,17 @@
 #define AF_ARRAY_OBJECT_AT_INDEX(__ARRAY, __INDEX) (AF_ARRAY_INDEX_EXISTS(__ARRAY, __INDEX) ? [__ARRAY objectAtIndex:__INDEX] : nil)
 #endif
 
+#ifndef AF_PERFORM_SAFE_SELECTOR
+#define AF_PERFORM_SAFE_SELECTOR(__OBJECT, __SEL) ({ if (__OBJECT != nil && [(NSObject *)__OBJECT respondsToSelector:__SEL]) { [(NSObject *)__OBJECT performSelector:__SEL]; } })
+#endif
+
+#ifndef AF_PERFORM_SAFE_SELECTOR_WITH_OBJECT
+#define AF_PERFORM_SAFE_SELECTOR_WITH_OBJECT(__OBJECT, __SEL, __PARAM1) ({ if (__OBJECT != nil && [(NSObject *)__OBJECT respondsToSelector:__SEL]) { [(NSObject *)__OBJECT performSelector:__SEL withObject:__PARAM1]; } })
+#endif
+
+#ifndef AF_PERFORM_SAFE_SELECTOR_WITH_OBJECT_WITH_OBJECT
+#define AF_PERFORM_SAFE_SELECTOR_WITH_OBJECT_WITH_OBJECT(__OBJECT, __SEL, __PARAM1, __PARAM2) ({ if (__OBJECT != nil && [(NSObject *)__OBJECT respondsToSelector:__SEL]) { [(NSObject *)__OBJECT performSelector:__SEL withObject:__PARAM1 withObject:__PARAM2]; } })
+#endif
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 //

@@ -3,7 +3,7 @@
 //  AFMacros
 //
 //  Created by Daniel Kuhnke on 12.08.13.
-//  Copyright (c) 2013 appfarms GmbH & Co. KG. All rights reserved.
+//  Copyright (c) 2014 appfarms GmbH & Co. KG. All rights reserved.
 //
 
 /*
