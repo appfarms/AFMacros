@@ -272,66 +272,70 @@ UIColor * AF_UIColorWithRGBString(NSString * string);
 #ifndef AF_FONT
 #define AF_FONT
 
+// Create new UIFont with FontName and FontSize
 #define AF_FONT_WITH_NAME(__FONTNAME__, __FONTSIZE__) [UIFont fontWithName:__FONTNAME__ size:__FONTSIZE__]
 
-// Academy Engraved LET
+// Log Font-Macros (including custom fonts)
+void AF_LOG_AVAILABLE_FONTS();
+
+
+// >>> Academy Engraved LET
 #define AF_FONT_ACADEMYENGRAVEDLETPLAIN @"AcademyEngravedLetPlain"
+// <<< Academy Engraved LET
 
-// Akzidenz-Grotesk Pro
-#define AF_FONT_AKZIDENZGROTESKPRO_BOLDEXIT @"AkzidenzGroteskPro-BoldExIt"
-#define AF_FONT_AKZIDENZGROTESKPRO_MEDEXTIT @"AkzidenzGroteskPro-MedExtIt"
-#define AF_FONT_AKZIDENZGROTESKPRO_LIGEXTIT @"AkzidenzGroteskPro-LigExtIt"
-#define AF_FONT_AKZIDENZGROTESKPRO_EXTITALIC @"AkzidenzGroteskPro-ExtItalic"
-#define AF_FONT_AKZIDENZGROTESKPRO_MD @"AkzidenzGroteskPro-Md"
-#define AF_FONT_AKZIDENZGROTESKPRO_MDEX @"AkzidenzGroteskPro-MdEx"
-#define AF_FONT_AKZIDENZGROTESKPRO_LIGHTEX @"AkzidenzGroteskPro-LightEx"
-#define AF_FONT_AKZIDENZGROTESKPRO_REGULAR @"AkzidenzGroteskPro-Regular"
-#define AF_FONT_AKZIDENZGROTESKPRO_LIGHT @"AkzidenzGroteskPro-Light"
-#define AF_FONT_AKZIDENZGROTESKPRO_BOLDEX @"AkzidenzGroteskPro-BoldEx"
-#define AF_FONT_AKZIDENZGROTESKPRO_BOLD @"AkzidenzGroteskPro-Bold"
-#define AF_FONT_AKZIDENZGROTESKPRO_EXT @"AkzidenzGroteskPro-Ext"
 
-// Al Nile
+// >>> Al Nile
 #define AF_FONT_ALNILE_BOLD @"AlNile-Bold"
 #define AF_FONT_ALNILE @"AlNile"
+// <<< Al Nile
 
-// American Typewriter
+
+// >>> American Typewriter
 #define AF_FONT_AMERICANTYPEWRITER_LIGHT @"AmericanTypewriter-Light"
 #define AF_FONT_AMERICANTYPEWRITER_CONDENSEDLIGHT @"AmericanTypewriter-CondensedLight"
 #define AF_FONT_AMERICANTYPEWRITER_CONDENSEDBOLD @"AmericanTypewriter-CondensedBold"
 #define AF_FONT_AMERICANTYPEWRITER @"AmericanTypewriter"
 #define AF_FONT_AMERICANTYPEWRITER_CONDENSED @"AmericanTypewriter-Condensed"
 #define AF_FONT_AMERICANTYPEWRITER_BOLD @"AmericanTypewriter-Bold"
+// <<< American Typewriter
 
-// Apercu
-#define AF_FONT_APERCU @"Apercu"
 
-// Apple Color Emoji
+// >>> Apple Color Emoji
 #define AF_FONT_APPLECOLOREMOJI @"AppleColorEmoji"
+// <<< Apple Color Emoji
 
-// Apple SD Gothic Neo
+
+// >>> Apple SD Gothic Neo
 #define AF_FONT_APPLESDGOTHICNEO_THIN @"AppleSDGothicNeo-Thin"
 #define AF_FONT_APPLESDGOTHICNEO_SEMIBOLD @"AppleSDGothicNeo-SemiBold"
 #define AF_FONT_APPLESDGOTHICNEO_MEDIUM @"AppleSDGothicNeo-Medium"
 #define AF_FONT_APPLESDGOTHICNEO_REGULAR @"AppleSDGothicNeo-Regular"
 #define AF_FONT_APPLESDGOTHICNEO_BOLD @"AppleSDGothicNeo-Bold"
 #define AF_FONT_APPLESDGOTHICNEO_LIGHT @"AppleSDGothicNeo-Light"
+// <<< Apple SD Gothic Neo
 
-// Arial
+
+// >>> Arial
 #define AF_FONT_ARIALMT @"ArialMT"
 #define AF_FONT_ARIAL_BOLDITALICMT @"Arial-BoldItalicMT"
 #define AF_FONT_ARIAL_ITALICMT @"Arial-ItalicMT"
 #define AF_FONT_ARIAL_BOLDMT @"Arial-BoldMT"
+// <<< Arial
 
-// Arial Hebrew
+
+// >>> Arial Hebrew
 #define AF_FONT_ARIALHEBREW_BOLD @"ArialHebrew-Bold"
 #define AF_FONT_ARIALHEBREW_LIGHT @"ArialHebrew-Light"
 #define AF_FONT_ARIALHEBREW @"ArialHebrew"
+// <<< Arial Hebrew
 
-// Arial Rounded MT Bold
+
+// >>> Arial Rounded MT Bold
 #define AF_FONT_ARIALROUNDEDMTBOLD @"ArialRoundedMTBold"
+// <<< Arial Rounded MT Bold
 
-// Avenir
+
+// >>> Avenir
 #define AF_FONT_AVENIR_HEAVY @"Avenir-Heavy"
 #define AF_FONT_AVENIR_OBLIQUE @"Avenir-Oblique"
 #define AF_FONT_AVENIR_BLACK @"Avenir-Black"
@@ -344,8 +348,10 @@ UIColor * AF_UIColorWithRGBString(NSString * string);
 #define AF_FONT_AVENIR_LIGHTOBLIQUE @"Avenir-LightOblique"
 #define AF_FONT_AVENIR_ROMAN @"Avenir-Roman"
 #define AF_FONT_AVENIR_BOOKOBLIQUE @"Avenir-BookOblique"
+// <<< Avenir
 
-// Avenir Next
+
+// >>> Avenir Next
 #define AF_FONT_AVENIRNEXT_MEDIUMITALIC @"AvenirNext-MediumItalic"
 #define AF_FONT_AVENIRNEXT_BOLD @"AvenirNext-Bold"
 #define AF_FONT_AVENIRNEXT_ULTRALIGHT @"AvenirNext-UltraLight"
@@ -358,8 +364,10 @@ UIColor * AF_UIColorWithRGBString(NSString * string);
 #define AF_FONT_AVENIRNEXT_BOLDITALIC @"AvenirNext-BoldItalic"
 #define AF_FONT_AVENIRNEXT_REGULAR @"AvenirNext-Regular"
 #define AF_FONT_AVENIRNEXT_DEMIBOLDITALIC @"AvenirNext-DemiBoldItalic"
+// <<< Avenir Next
 
-// Avenir Next Condensed
+
+// >>> Avenir Next Condensed
 #define AF_FONT_AVENIRNEXTCONDENSED_REGULAR @"AvenirNextCondensed-Regular"
 #define AF_FONT_AVENIRNEXTCONDENSED_MEDIUMITALIC @"AvenirNextCondensed-MediumItalic"
 #define AF_FONT_AVENIRNEXTCONDENSED_ULTRALIGHTITALIC @"AvenirNextCondensed-UltraLightItalic"
@@ -372,148 +380,208 @@ UIColor * AF_UIColorWithRGBString(NSString * string);
 #define AF_FONT_AVENIRNEXTCONDENSED_DEMIBOLDITALIC @"AvenirNextCondensed-DemiBoldItalic"
 #define AF_FONT_AVENIRNEXTCONDENSED_DEMIBOLD @"AvenirNextCondensed-DemiBold"
 #define AF_FONT_AVENIRNEXTCONDENSED_BOLD @"AvenirNextCondensed-Bold"
+// <<< Avenir Next Condensed
 
-// Bangla Sangam MN
+
+// >>> Bangla Sangam MN
 #define AF_FONT_BANGLASANGAMMN @"BanglaSangamMN"
 #define AF_FONT_BANGLASANGAMMN_BOLD @"BanglaSangamMN-Bold"
+// <<< Bangla Sangam MN
 
-// Baskerville
+
+// >>> Baskerville
 #define AF_FONT_BASKERVILLE_BOLD @"Baskerville-Bold"
 #define AF_FONT_BASKERVILLE_SEMIBOLDITALIC @"Baskerville-SemiBoldItalic"
 #define AF_FONT_BASKERVILLE_BOLDITALIC @"Baskerville-BoldItalic"
 #define AF_FONT_BASKERVILLE @"Baskerville"
 #define AF_FONT_BASKERVILLE_SEMIBOLD @"Baskerville-SemiBold"
 #define AF_FONT_BASKERVILLE_ITALIC @"Baskerville-Italic"
+// <<< Baskerville
 
-// Bodoni 72
+
+// >>> Bodoni 72
 #define AF_FONT_BODONISVTYTWOITCTT_BOOK @"BodoniSvtyTwoITCTT-Book"
 #define AF_FONT_BODONISVTYTWOITCTT_BOLD @"BodoniSvtyTwoITCTT-Bold"
 #define AF_FONT_BODONISVTYTWOITCTT_BOOKITA @"BodoniSvtyTwoITCTT-BookIta"
+// <<< Bodoni 72
 
-// Bodoni 72 Oldstyle
+
+// >>> Bodoni 72 Oldstyle
 #define AF_FONT_BODONISVTYTWOOSITCTT_BOOKIT @"BodoniSvtyTwoOSITCTT-BookIt"
 #define AF_FONT_BODONISVTYTWOOSITCTT_BOLD @"BodoniSvtyTwoOSITCTT-Bold"
 #define AF_FONT_BODONISVTYTWOOSITCTT_BOOK @"BodoniSvtyTwoOSITCTT-Book"
+// <<< Bodoni 72 Oldstyle
 
-// Bodoni 72 Smallcaps
+
+// >>> Bodoni 72 Smallcaps
 #define AF_FONT_BODONISVTYTWOSCITCTT_BOOK @"BodoniSvtyTwoSCITCTT-Book"
+// <<< Bodoni 72 Smallcaps
 
-// Bodoni Ornaments
+
+// >>> Bodoni Ornaments
 #define AF_FONT_BODONIORNAMENTSITCTT @"BodoniOrnamentsITCTT"
+// <<< Bodoni Ornaments
 
-// Bradley Hand
+
+// >>> Bradley Hand
 #define AF_FONT_BRADLEYHANDITCTT_BOLD @"BradleyHandITCTT-Bold"
+// <<< Bradley Hand
 
-// Chalkboard SE
+
+// >>> Chalkboard SE
 #define AF_FONT_CHALKBOARDSE_LIGHT @"ChalkboardSE-Light"
 #define AF_FONT_CHALKBOARDSE_REGULAR @"ChalkboardSE-Regular"
 #define AF_FONT_CHALKBOARDSE_BOLD @"ChalkboardSE-Bold"
+// <<< Chalkboard SE
 
-// Chalkduster
+
+// >>> Chalkduster
 #define AF_FONT_CHALKDUSTER @"Chalkduster"
+// <<< Chalkduster
 
-// Cochin
+
+// >>> Cochin
 #define AF_FONT_COCHIN_BOLD @"Cochin-Bold"
 #define AF_FONT_COCHIN_BOLDITALIC @"Cochin-BoldItalic"
 #define AF_FONT_COCHIN_ITALIC @"Cochin-Italic"
 #define AF_FONT_COCHIN @"Cochin"
+// <<< Cochin
 
-// Copperplate
+
+// >>> Copperplate
 #define AF_FONT_COPPERPLATE @"Copperplate"
 #define AF_FONT_COPPERPLATE_LIGHT @"Copperplate-Light"
 #define AF_FONT_COPPERPLATE_BOLD @"Copperplate-Bold"
+// <<< Copperplate
 
-// Courier
+
+// >>> Courier
 #define AF_FONT_COURIER @"Courier"
 #define AF_FONT_COURIER_OBLIQUE @"Courier-Oblique"
 #define AF_FONT_COURIER_BOLDOBLIQUE @"Courier-BoldOblique"
 #define AF_FONT_COURIER_BOLD @"Courier-Bold"
+// <<< Courier
 
-// Courier New
+
+// >>> Courier New
 #define AF_FONT_COURIERNEWPSMT @"CourierNewPSMT"
 #define AF_FONT_COURIERNEWPS_BOLDMT @"CourierNewPS-BoldMT"
 #define AF_FONT_COURIERNEWPS_ITALICMT @"CourierNewPS-ItalicMT"
 #define AF_FONT_COURIERNEWPS_BOLDITALICMT @"CourierNewPS-BoldItalicMT"
+// <<< Courier New
 
-// Damascus
+
+// >>> Damascus
 #define AF_FONT_DAMASCUSBOLD @"DamascusBold"
 #define AF_FONT_DAMASCUS @"Damascus"
 #define AF_FONT_DAMASCUSMEDIUM @"DamascusMedium"
 #define AF_FONT_DAMASCUSSEMIBOLD @"DamascusSemiBold"
+// <<< Damascus
 
-// Devanagari Sangam MN
+
+// >>> Devanagari Sangam MN
 #define AF_FONT_DEVANAGARISANGAMMN @"DevanagariSangamMN"
 #define AF_FONT_DEVANAGARISANGAMMN_BOLD @"DevanagariSangamMN-Bold"
+// <<< Devanagari Sangam MN
 
-// Didot
+
+// >>> Didot
 #define AF_FONT_DIDOT_BOLD @"Didot-Bold"
 #define AF_FONT_DIDOT_ITALIC @"Didot-Italic"
 #define AF_FONT_DIDOT @"Didot"
+// <<< Didot
 
-// DIN Alternate
+
+// >>> DIN Alternate
 #define AF_FONT_DINALTERNATE_BOLD @"DINAlternate-Bold"
+// <<< DIN Alternate
 
-// DIN Condensed
+
+// >>> DIN Condensed
 #define AF_FONT_DINCONDENSED_BOLD @"DINCondensed-Bold"
+// <<< DIN Condensed
 
-// Euphemia UCAS
+
+// >>> Euphemia UCAS
 #define AF_FONT_EUPHEMIAUCAS @"EuphemiaUCAS"
 #define AF_FONT_EUPHEMIAUCAS_BOLD @"EuphemiaUCAS-Bold"
 #define AF_FONT_EUPHEMIAUCAS_ITALIC @"EuphemiaUCAS-Italic"
+// <<< Euphemia UCAS
 
-// Farah
+
+// >>> Farah
 #define AF_FONT_FARAH @"Farah"
+// <<< Farah
 
-// Futura
+
+// >>> Futura
 #define AF_FONT_FUTURA_MEDIUM @"Futura-Medium"
 #define AF_FONT_FUTURA_CONDENSEDMEDIUM @"Futura-CondensedMedium"
 #define AF_FONT_FUTURA_MEDIUMITALIC @"Futura-MediumItalic"
 #define AF_FONT_FUTURA_CONDENSEDEXTRABOLD @"Futura-CondensedExtraBold"
+// <<< Futura
 
-// Geeza Pro
+
+// >>> Geeza Pro
 #define AF_FONT_GEEZAPRO_BOLD @"GeezaPro-Bold"
 #define AF_FONT_GEEZAPRO @"GeezaPro"
 #define AF_FONT_GEEZAPRO_LIGHT @"GeezaPro-Light"
+// <<< Geeza Pro
 
-// Georgia
+
+// >>> Georgia
 #define AF_FONT_GEORGIA_BOLDITALIC @"Georgia-BoldItalic"
 #define AF_FONT_GEORGIA_BOLD @"Georgia-Bold"
 #define AF_FONT_GEORGIA_ITALIC @"Georgia-Italic"
 #define AF_FONT_GEORGIA @"Georgia"
+// <<< Georgia
 
-// Gill Sans
+
+// >>> Gill Sans
 #define AF_FONT_GILLSANS @"GillSans"
 #define AF_FONT_GILLSANS_ITALIC @"GillSans-Italic"
 #define AF_FONT_GILLSANS_BOLDITALIC @"GillSans-BoldItalic"
 #define AF_FONT_GILLSANS_LIGHT @"GillSans-Light"
 #define AF_FONT_GILLSANS_LIGHTITALIC @"GillSans-LightItalic"
 #define AF_FONT_GILLSANS_BOLD @"GillSans-Bold"
+// <<< Gill Sans
 
-// Gujarati Sangam MN
+
+// >>> Gujarati Sangam MN
 #define AF_FONT_GUJARATISANGAMMN_BOLD @"GujaratiSangamMN-Bold"
 #define AF_FONT_GUJARATISANGAMMN @"GujaratiSangamMN"
+// <<< Gujarati Sangam MN
 
-// Gurmukhi MN
+
+// >>> Gurmukhi MN
 #define AF_FONT_GURMUKHIMN_BOLD @"GurmukhiMN-Bold"
 #define AF_FONT_GURMUKHIMN @"GurmukhiMN"
+// <<< Gurmukhi MN
 
-// Heiti SC
+
+// >>> Heiti SC
 #define AF_FONT_STHEITISC_MEDIUM @"STHeitiSC-Medium"
 #define AF_FONT_STHEITISC_LIGHT @"STHeitiSC-Light"
+// <<< Heiti SC
 
-// Heiti TC
+
+// >>> Heiti TC
 #define AF_FONT_STHEITITC_MEDIUM @"STHeitiTC-Medium"
 #define AF_FONT_STHEITITC_LIGHT @"STHeitiTC-Light"
+// <<< Heiti TC
 
-// Helvetica
+
+// >>> Helvetica
 #define AF_FONT_HELVETICA_OBLIQUE @"Helvetica-Oblique"
 #define AF_FONT_HELVETICA_LIGHT @"Helvetica-Light"
 #define AF_FONT_HELVETICA_BOLD @"Helvetica-Bold"
 #define AF_FONT_HELVETICA @"Helvetica"
 #define AF_FONT_HELVETICA_BOLDOBLIQUE @"Helvetica-BoldOblique"
 #define AF_FONT_HELVETICA_LIGHTOBLIQUE @"Helvetica-LightOblique"
+// <<< Helvetica
 
-// Helvetica Neue
+
+// >>> Helvetica Neue
 #define AF_FONT_HELVETICANEUE_BOLDITALIC @"HelveticaNeue-BoldItalic"
 #define AF_FONT_HELVETICANEUE_LIGHT @"HelveticaNeue-Light"
 #define AF_FONT_HELVETICANEUE_ITALIC @"HelveticaNeue-Italic"
@@ -528,98 +596,146 @@ UIColor * AF_UIColorWithRGBString(NSString * string);
 #define AF_FONT_HELVETICANEUE_BOLD @"HelveticaNeue-Bold"
 #define AF_FONT_HELVETICANEUE @"HelveticaNeue"
 #define AF_FONT_HELVETICANEUE_CONDENSEDBLACK @"HelveticaNeue-CondensedBlack"
+// <<< Helvetica Neue
 
-// Hiragino Kaku Gothic ProN
+
+// >>> Hiragino Kaku Gothic ProN
 #define AF_FONT_HIRAKAKUPRON_W6 @"HiraKakuProN-W6"
 #define AF_FONT_HIRAKAKUPRON_W3 @"HiraKakuProN-W3"
+// <<< Hiragino Kaku Gothic ProN
 
-// Hiragino Mincho ProN
+
+// >>> Hiragino Mincho ProN
 #define AF_FONT_HIRAMINPRON_W6 @"HiraMinProN-W6"
 #define AF_FONT_HIRAMINPRON_W3 @"HiraMinProN-W3"
+// <<< Hiragino Mincho ProN
 
-// Hoefler Text
+
+// >>> Hoefler Text
 #define AF_FONT_HOEFLERTEXT_REGULAR @"HoeflerText-Regular"
 #define AF_FONT_HOEFLERTEXT_BLACKITALIC @"HoeflerText-BlackItalic"
 #define AF_FONT_HOEFLERTEXT_ITALIC @"HoeflerText-Italic"
 #define AF_FONT_HOEFLERTEXT_BLACK @"HoeflerText-Black"
+// <<< Hoefler Text
 
-// Iowan Old Style
+
+// >>> Iowan Old Style
 #define AF_FONT_IOWANOLDSTYLE_BOLD @"IowanOldStyle-Bold"
 #define AF_FONT_IOWANOLDSTYLE_BOLDITALIC @"IowanOldStyle-BoldItalic"
 #define AF_FONT_IOWANOLDSTYLE_ITALIC @"IowanOldStyle-Italic"
 #define AF_FONT_IOWANOLDSTYLE_ROMAN @"IowanOldStyle-Roman"
+// <<< Iowan Old Style
 
-// Kailasa
+
+// >>> Kailasa
 #define AF_FONT_KAILASA @"Kailasa"
 #define AF_FONT_KAILASA_BOLD @"Kailasa-Bold"
+// <<< Kailasa
 
-// Kannada Sangam MN
+
+// >>> Kannada Sangam MN
 #define AF_FONT_KANNADASANGAMMN @"KannadaSangamMN"
 #define AF_FONT_KANNADASANGAMMN_BOLD @"KannadaSangamMN-Bold"
+// <<< Kannada Sangam MN
 
-// Malayalam Sangam MN
+
+// >>> Lucida Grande
+#define AF_FONT_LUCIDAGRANDE @"LucidaGrande"
+#define AF_FONT_LUCIDAGRANDE_BOLD @"LucidaGrande-Bold"
+// <<< Lucida Grande
+
+
+// >>> Malayalam Sangam MN
 #define AF_FONT_MALAYALAMSANGAMMN @"MalayalamSangamMN"
 #define AF_FONT_MALAYALAMSANGAMMN_BOLD @"MalayalamSangamMN-Bold"
+// <<< Malayalam Sangam MN
 
-// Marion
+
+// >>> Marion
 #define AF_FONT_MARION_REGULAR @"Marion-Regular"
 #define AF_FONT_MARION_ITALIC @"Marion-Italic"
 #define AF_FONT_MARION_BOLD @"Marion-Bold"
+// <<< Marion
 
-// Marker Felt
+
+// >>> Marker Felt
 #define AF_FONT_MARKERFELT_THIN @"MarkerFelt-Thin"
 #define AF_FONT_MARKERFELT_WIDE @"MarkerFelt-Wide"
+// <<< Marker Felt
 
-// Menlo
+
+// >>> Menlo
 #define AF_FONT_MENLO_BOLDITALIC @"Menlo-BoldItalic"
 #define AF_FONT_MENLO_REGULAR @"Menlo-Regular"
 #define AF_FONT_MENLO_BOLD @"Menlo-Bold"
 #define AF_FONT_MENLO_ITALIC @"Menlo-Italic"
+// <<< Menlo
 
-// Mishafi
+
+// >>> Mishafi
 #define AF_FONT_DIWANMISHAFI @"DiwanMishafi"
+// <<< Mishafi
 
-// Noteworthy
+
+// >>> Noteworthy
 #define AF_FONT_NOTEWORTHY_BOLD @"Noteworthy-Bold"
 #define AF_FONT_NOTEWORTHY_LIGHT @"Noteworthy-Light"
+// <<< Noteworthy
 
-// Optima
+
+// >>> Optima
 #define AF_FONT_OPTIMA_REGULAR @"Optima-Regular"
 #define AF_FONT_OPTIMA_ITALIC @"Optima-Italic"
 #define AF_FONT_OPTIMA_BOLD @"Optima-Bold"
 #define AF_FONT_OPTIMA_BOLDITALIC @"Optima-BoldItalic"
 #define AF_FONT_OPTIMA_EXTRABLACK @"Optima-ExtraBlack"
+// <<< Optima
 
-// Oriya Sangam MN
+
+// >>> Oriya Sangam MN
 #define AF_FONT_ORIYASANGAMMN @"OriyaSangamMN"
 #define AF_FONT_ORIYASANGAMMN_BOLD @"OriyaSangamMN-Bold"
+// <<< Oriya Sangam MN
 
-// Palatino
+
+// >>> Palatino
 #define AF_FONT_PALATINO_ROMAN @"Palatino-Roman"
 #define AF_FONT_PALATINO_ITALIC @"Palatino-Italic"
 #define AF_FONT_PALATINO_BOLD @"Palatino-Bold"
 #define AF_FONT_PALATINO_BOLDITALIC @"Palatino-BoldItalic"
+// <<< Palatino
 
-// Papyrus
+
+// >>> Papyrus
 #define AF_FONT_PAPYRUS_CONDENSED @"Papyrus-Condensed"
 #define AF_FONT_PAPYRUS @"Papyrus"
+// <<< Papyrus
 
-// Party LET
+
+// >>> Party LET
 #define AF_FONT_PARTYLETPLAIN @"PartyLetPlain"
+// <<< Party LET
 
-// Savoye LET
+
+// >>> Savoye LET
 #define AF_FONT_SAVOYELETPLAIN @"SavoyeLetPlain"
+// <<< Savoye LET
 
-// Sinhala Sangam MN
+
+// >>> Sinhala Sangam MN
 #define AF_FONT_SINHALASANGAMMN @"SinhalaSangamMN"
 #define AF_FONT_SINHALASANGAMMN_BOLD @"SinhalaSangamMN-Bold"
+// <<< Sinhala Sangam MN
 
-// Snell Roundhand
+
+// >>> Snell Roundhand
 #define AF_FONT_SNELLROUNDHAND_BLACK @"SnellRoundhand-Black"
 #define AF_FONT_SNELLROUNDHAND_BOLD @"SnellRoundhand-Bold"
 #define AF_FONT_SNELLROUNDHAND @"SnellRoundhand"
+// <<< Snell Roundhand
 
-// Superclarendon
+
+// >>> Superclarendon
 #define AF_FONT_SUPERCLARENDON_REGULAR @"Superclarendon-Regular"
 #define AF_FONT_SUPERCLARENDON_BOLDITALIC @"Superclarendon-BoldItalic"
 #define AF_FONT_SUPERCLARENDON_LIGHT @"Superclarendon-Light"
@@ -628,45 +744,65 @@ UIColor * AF_UIColorWithRGBString(NSString * string);
 #define AF_FONT_SUPERCLARENDON_LIGHTITALIC @"Superclarendon-LightItalic"
 #define AF_FONT_SUPERCLARENDON_BOLD @"Superclarendon-Bold"
 #define AF_FONT_SUPERCLARENDON_BLACK @"Superclarendon-Black"
+// <<< Superclarendon
 
-// Symbol
+
+// >>> Symbol
 #define AF_FONT_SYMBOL @"Symbol"
+// <<< Symbol
 
-// Tamil Sangam MN
+
+// >>> Tamil Sangam MN
 #define AF_FONT_TAMILSANGAMMN @"TamilSangamMN"
 #define AF_FONT_TAMILSANGAMMN_BOLD @"TamilSangamMN-Bold"
+// <<< Tamil Sangam MN
 
-// Telugu Sangam MN
+
+// >>> Telugu Sangam MN
 #define AF_FONT_TELUGUSANGAMMN @"TeluguSangamMN"
 #define AF_FONT_TELUGUSANGAMMN_BOLD @"TeluguSangamMN-Bold"
+// <<< Telugu Sangam MN
 
-// Thonburi
+
+// >>> Thonburi
 #define AF_FONT_THONBURI_BOLD @"Thonburi-Bold"
 #define AF_FONT_THONBURI @"Thonburi"
 #define AF_FONT_THONBURI_LIGHT @"Thonburi-Light"
+// <<< Thonburi
 
-// Times New Roman
+
+// >>> Times New Roman
 #define AF_FONT_TIMESNEWROMANPS_BOLDITALICMT @"TimesNewRomanPS-BoldItalicMT"
 #define AF_FONT_TIMESNEWROMANPSMT @"TimesNewRomanPSMT"
 #define AF_FONT_TIMESNEWROMANPS_BOLDMT @"TimesNewRomanPS-BoldMT"
 #define AF_FONT_TIMESNEWROMANPS_ITALICMT @"TimesNewRomanPS-ItalicMT"
+// <<< Times New Roman
 
-// Trebuchet MS
+
+// >>> Trebuchet MS
 #define AF_FONT_TREBUCHET_BOLDITALIC @"Trebuchet-BoldItalic"
 #define AF_FONT_TREBUCHETMS @"TrebuchetMS"
 #define AF_FONT_TREBUCHETMS_BOLD @"TrebuchetMS-Bold"
 #define AF_FONT_TREBUCHETMS_ITALIC @"TrebuchetMS-Italic"
+// <<< Trebuchet MS
 
-// Verdana
+
+// >>> Verdana
 #define AF_FONT_VERDANA_BOLDITALIC @"Verdana-BoldItalic"
 #define AF_FONT_VERDANA_ITALIC @"Verdana-Italic"
 #define AF_FONT_VERDANA @"Verdana"
 #define AF_FONT_VERDANA_BOLD @"Verdana-Bold"
+// <<< Verdana
 
-// Zapf Dingbats
+
+// >>> Zapf Dingbats
 #define AF_FONT_ZAPFDINGBATSITC @"ZapfDingbatsITC"
+// <<< Zapf Dingbats
 
-// Zapfino
+
+// >>> Zapfino
 #define AF_FONT_ZAPFINO @"Zapfino"
+// <<< Zapfino
+
 
 #endif

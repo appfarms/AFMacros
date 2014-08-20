@@ -222,3 +222,19 @@ UIColor * AF_UIColorWithRGBString(NSString * string)
     return nil;
 }
 
+#pragma mark - UIFont
+
+void AF_LOG_AVAILABLE_FONTS()
+{
+  for (NSString * fontFamily in [[UIFont familyNames] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)])
+  {
+    NSLog(@"%@",@"\n");
+    NSLog(@"// >>> %@", fontFamily);
+    for (NSString * fontName in [UIFont fontNamesForFamilyName:fontFamily])
+    {
+      NSLog(@"#define AF_FONT_%@ @\"%@\"", [[fontName.uppercaseString stringByReplacingOccurrencesOfString:@"-" withString:@"_"] stringByReplacingOccurrencesOfString:@" " withString:@"_"], fontName);
+    }
+    NSLog(@"// <<< %@", fontFamily);
+    NSLog(@"%@",@"\n");
+  }
+}
