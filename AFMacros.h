@@ -235,9 +235,9 @@
 
 
 NSString * AF_NSStringByEncodingData(NSData * data);
-NSString * AF_NSStringMachineNameFromCurrentDevice();
-NSString * AF_NSUUIDCreateString();
-NSString * AF_NSUUIDString();
+NSString * AF_NSStringMachineNameFromCurrentDevice(void);
+NSString * AF_NSUUIDCreateString(void);
+NSString * AF_NSUUIDString(void);
 
 NSDate * AF_NSDateFromStringWithFormat(NSString * dateString, NSString * formatString);
 NSDate * AF_NSDateFromUTCString(NSString * dateString);
@@ -276,7 +276,7 @@ UIColor * AF_UIColorWithRGBString(NSString * string);
 #define AF_FONT_WITH_NAME(__FONTNAME__, __FONTSIZE__) [UIFont fontWithName:__FONTNAME__ size:__FONTSIZE__]
 
 // Log Font-Macros (including custom fonts)
-void AF_LOG_AVAILABLE_FONTS();
+void AF_LOG_AVAILABLE_FONTS(void);
 
 
 // >>> Academy Engraved LET
